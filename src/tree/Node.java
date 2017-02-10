@@ -1,3 +1,4 @@
+package tree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +7,7 @@ import java.lang.*;
 /**
  * Created by User on 10.02.17.
  */
-class Node<T extends Comparable<T>> {
+public class Node<T extends Comparable<T>> {
     private T value;
     private Node parent;
     private List<Node> leftChildren;
@@ -25,7 +26,7 @@ class Node<T extends Comparable<T>> {
     /**
      * @param value node's value
      */
-    Node(T value) {
+    public Node(T value) {
         this.value = value;
     }
 
@@ -38,7 +39,7 @@ class Node<T extends Comparable<T>> {
     }
 
 
-    List<Node> addChildren(Node newChild) {
+    public List<Node> addChildren(Node newChild) {
         if (newChild.value.compareTo(this.value) == 0) { // new child was not added as its value same as current node's
             return null;
         } else if (newChild.value.compareTo(this.value) < 0) { // add to left

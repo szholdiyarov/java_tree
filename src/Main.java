@@ -1,8 +1,9 @@
+import tree.Node;
+
 public class Main {
     static Node rootNode;
 
     public static void main(String[] args) {
-        System.out.println("Start generating tree");
 
         rootNode = Node.initTree(new Node<>(1.0));
         System.out.println(rootNode);
